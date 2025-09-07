@@ -78,7 +78,7 @@ figure('Color',[1 0.98 0.95])
 subplot(4,5,1)
 hold on
 box on
-xlim([pars.whenstart/1e6 pars.whenend/1e6])
+xlim([-240 -195])
 ylim([0 2.5])
 xlabel('Time (Ma)')
 ylabel('Relative forcing')
@@ -103,7 +103,7 @@ title('Forcings')
 subplot(4,5,2)
 hold on
 box on
-xlim([pars.whenstart/1e6 pars.whenend/1e6])
+xlim([-240 -195])
 xlabel('Time (Ma)')
 ylabel('Flux (mol/yr)')
 %%%% plot this model
@@ -123,7 +123,7 @@ title('C_{org} fluxes')
 subplot(4,5,3)
 hold on
 box on
-xlim([pars.whenstart/1e6 pars.whenend/1e6])
+xlim([-240 -195])
 xlabel('Time (Ma)')
 ylabel('Flux (mol/yr)')
 %%%% plot this model
@@ -143,7 +143,7 @@ title('C_{carb} fluxes')
 subplot(4,5,4)
 hold on
 box on
-xlim([pars.whenstart/1e6 pars.whenend/1e6])
+xlim([-240 -195])
 xlabel('Time (Ma)')
 % ylim([0 5e12])
 ylabel('Fluxes (mol/yr)')
@@ -168,7 +168,7 @@ title('S fluxes')
 subplot(4,5,5)
 hold on
 box on
-xlim([pars.whenstart/1e6 pars.whenend/1e6])
+xlim([-240 -195])
 xlabel('Time (Ma)')
 ylabel('Relative size')
 %%%% plot this model
@@ -186,7 +186,7 @@ title('C reservoirs')
 subplot(4,5,6)
 hold on
 box on
-xlim([pars.whenstart/1e6 pars.whenend/1e6])
+xlim([-240 -195])
 xlabel('Time (Ma)')
 ylabel('Relative size')
 %%%% plot this model
@@ -202,7 +202,7 @@ title('S reservoirs')
 subplot(4,5,7)
 hold on
 box on
-xlim([pars.whenstart/1e6 pars.whenend/1e6])
+xlim([-240 -195])
 ylim([0 3])
 xlabel('Time (Ma)')
 ylabel('Relative size')
@@ -219,7 +219,7 @@ title('Nutrient reservoirs')
 subplot(4,5,8)
 hold on
 box on
-xlim([pars.whenstart/1e6 pars.whenend/1e6])
+xlim([-240 -195])
 xlabel('Time (Ma)')
 ylabel('f_{org}, f_{py}')
 %%%% plot this model
@@ -231,7 +231,7 @@ plot(state.time_myr, state.mpsb ./ (state.mpsb + state.mgsb),'m')
 subplot(4,5,9)
 hold on
 box on
-xlim([pars.whenstart/1e6 pars.whenend/1e6])
+xlim([-240 -195])
 xlabel('Time (Ma)')
 ylabel('\delta^{13}C_{carb}')
 %%%% plot data comparison
@@ -246,7 +246,7 @@ plot(state.time_myr,state.delta_mccb,'k')
 subplot(4,5,10)
 hold on
 box on
-xlim([pars.whenstart/1e6 pars.whenend/1e6])
+xlim([-240 -195])
 xlabel('Time (Ma)')
 ylabel('\delta^{34}S_{sw}')
 %%%% plot data comparison
@@ -258,7 +258,7 @@ plot(state.time_myr,state.d34s_S,'k')
 subplot(4,5,11)
 hold on
 box on
-xlim([pars.whenstart/1e6 pars.whenend/1e6])
+xlim([-240 -195])
 ylim([0.706 0.71])
 xlabel('Time (Ma)')
 ylabel('^{87}Sr/^{86}Sr seawater')
@@ -271,7 +271,7 @@ plot(state.time_myr,state.delta_OSr,'k')
 subplot(4,5,12)
 hold on
 box on
-xlim([pars.whenstart/1e6 pars.whenend/1e6])
+xlim([-240 -195])
 xlabel('Time (Ma)')
 ylabel('Marine SO_{4} (mM)')
 %%%% plot algeo data window comparison
@@ -289,7 +289,7 @@ plot(state.time_myr,(state.S./pars.S0)*28,'k')
 subplot(4,5,13)
 hold on
 box on
-xlim([pars.whenstart/1e6 pars.whenend/1e6])
+xlim([-240 -195])
 xlabel('Time (Ma)')
 ylabel('Atmospheric O_{2} (%)')
 %%%% plot data comparison
@@ -304,7 +304,7 @@ subplot(4,5,14)
 set(gca, 'YScale', 'log')
 hold on
 box on
-xlim([pars.whenstart/1e6 pars.whenend/1e6])
+xlim([-240 -195])
 ylim([100 10000])
 xlabel('Time (Ma)')
 ylabel('Atmospheric CO_{2} (ppm)')
@@ -335,7 +335,7 @@ plot(state.time_myr,state.RCO2.*280,'k')
 subplot(4,5,15)
 hold on
 box on
-xlim([pars.whenstart/1e6 pars.whenend/1e6])
+xlim([-240 -195])
 ylim([5 40])
 xlabel('Time (Ma)')
 ylabel('GAST (C)')
@@ -350,7 +350,7 @@ plot(state.time_myr,state.SAT_equator,'r')
 subplot(4,5,16)
 hold on
 box on
-xlim([pars.whenstart/1e6 pars.whenend/1e6])
+xlim([-240 -195])
 xlabel('Time (Ma)')
 ylabel('Ice line')
 %%%% plot iceline proxy
@@ -365,7 +365,7 @@ colormap(gca,'gray')
 subplot(4,5,17)
 hold on
 box on
-xlim([pars.whenstart/1e6 pars.whenend/1e6])
+xlim([-240 -195])
 xlabel('Time (Ma)')
 ylabel('ANOX')
 %%%% plot this model
@@ -377,7 +377,7 @@ colormap(gca,'gray')
 subplot(4,5,18)
 hold on
 box on
-xlim([pars.whenstart/1e6 pars.whenend/1e6])
+xlim([-240 -195])
 xlabel('Time (Ma)')
 ylabel('\delta^{15}N')
 % axis([-600 0 -5 20]); % Format: [xmin xmax ymin ymax]
@@ -396,7 +396,7 @@ colormap(gca,'gray')
 subplot(4,5,19)
 hold on
 box on
-xlim([pars.whenstart/1e6 pars.whenend/1e6])
+xlim([-240 -195])
 xlabel('Time (Ma)')
 ylabel('denit water (b), denit sed (b--) nfix (g), monb (k)')
 %%%% plot this model
@@ -409,7 +409,7 @@ colormap(gca,'gray')
 % === Runoff normalization and f_wc ===
 subplot(4,5,19)  % 
 hold on; box on;
-xlim([pars.whenstart/1e6 pars.whenend/1e6])
+xlim([-240 -195])
 xlabel('Time (Ma)')
 yyaxis left
 plot(state.time_myr, state.Qnorm, 'k')
@@ -423,7 +423,7 @@ title('Runoff (Q_{norm}) and water-column denitrification fraction')
 % === External N inputs: river vs volcanic ===
 subplot(4,5,20)  
 hold on; box on;
-xlim([pars.whenstart/1e6 pars.whenend/1e6])
+xlim([-240 -195])
 xlabel('Time (Ma)')
 ylabel('N input (mol/yr)')
 plot(state.time_myr, state.riverine_input, 'g')

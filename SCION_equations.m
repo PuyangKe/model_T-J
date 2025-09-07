@@ -82,7 +82,8 @@ RO2 =  O/pars.O0 ;
 
 % ===== Volcanic CO2 =====
 forcings.volcanics = [
-   -235.0   0                -5 ;   
+    -1000.0   0                -5 ;   
+    -235.0   0                -5 ;   
    -234.0   8.14e10          -5 ;   % Wrangellia ~1.4 Myr
    -232.6   0                -5 ;
 
@@ -93,6 +94,7 @@ forcings.volcanics = [
    -202.0   0                -5 ;
    -201.5   2.39e12         -20 ;   % CAMP 1 Myr， −20‰
    -200.5   0                -5 ;
+   -195     0                -5 ;
 ];
 
 

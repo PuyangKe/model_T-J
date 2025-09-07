@@ -250,16 +250,18 @@ function run = SCION_initialise(runcontrol)
     % Algeo_2014_d15N = Algeo_2014(:,2) ;
 
 %%%% read δ15N and δ13C data comparison file
-T = readtable('T-J data.xlsx','VariableNamingRule','preserve');
+% T = readtable('T-J data.xlsx','VariableNamingRule','preserve');
+% 
+% Age  = str2double(string(T.Age));  Age  = Age(:);
+% d13C = str2double(string(T.C));    d13C = d13C(:);   
+% d15N = str2double(string(T.N));    d15N = d15N(:);   
+% 
 
-Age  = str2double(string(T.Age));  Age  = Age(:);
-d13C = str2double(string(T.C));    d13C = d13C(:);   
-d15N = str2double(string(T.N));    d15N = d15N(:);   
 
-T_J_data.age  = Age;
-T_J_data.d13C = d13C;
-T_J_data.d15N = d15N;
-
+load('TJ_data.mat') ;
+T_J_data.age  = data_Age;
+T_J_data.d13C = data_d13C;
+T_J_data.d15N = data_d15N;
 
 
 
@@ -299,7 +301,7 @@ T_J_data.d15N = d15N;
     end
 
     %%%%%%% model timeframe in years (0 = present day)
-    pars.whenstart = - 240e6 ;
+    pars.whenstart = - 600e6 ;
     pars.whenend = - 195e6 ;
 
     %%%% setp up grid stamp times
